@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente.</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+    
+    <h2>Vídeo inserido da forma simples.</h2>
+    <video src="midia/danilo.ogv.ogv" width="300" poster="imagens/danilo-capa.png" controls autoplay loop></video><!--Forma simples-->
+
+    <h2>Vídeo inserido da forma correta.</h2>
+    <p>
+        <video width="300" poster="imagens/danilo-capa.png" controls>
+            <source src="midia/danilo.webm.webm" type="video/webm">
+            <source src="midia/danilo.m4v.m4v" type="video/m4v">
+            <source src="midia/danilo.ogv.ogv" type="video/ogv">
+            <source src="midia/danilo.mp4.mp4" type="video/mp4">
+            <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+        </video>
+    </p>
+
+    <h1>Inserindo vídeos do YouTube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MRIZSoE40R0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</html>

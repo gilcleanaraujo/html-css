@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <style>
+        h1 { /* box-level */
+
+            background-color: lightgray;
+            height:  300px;
+            width: 300px;
+
+            /*
+            -----------------------------
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray;
+            -----------------------------
+            Na mesma sequência de elementos a cima, pode ser substituido por o seguinte SHORTHAND a baixo 
+            */
+                border: 10px solid darkslategray; /* Sempre terminar com ; ponto e virgula */
+
+            /*
+            -----------------------------
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            -----------------------------
+            1º Nas configurações em SHORTHAND importante que siga a sequencia no sentido horário, como um relógio!
+            2º A baixo segue a simplicação em SHORTHAND
+
+            */
+                padding: 10px 30px; 
+                /* 
+                - Quando colocar apenas 1 valor, é o mesmo valor pra os 4
+                - Quando colocar os 4 valores, a sequencia é cima, direita, baixo e esquerda 
+                - Quando usar apenas 2 valores, 
+                    O PRIMEIRO VALOR significa cima e baixo
+                    O SEGUNDO VALOR Significa direita e esquerda
+                */
+
+            /*
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 30px;
+            margin-left: 10px;
+             ~ margin: auto ~ vai centralizar a caixa
+             A baixo segue a simplicação em SHORTHAND
+             */
+                margin: 10px auto 40px auto; /* Dessa forma a margem direita e esquerda vai ficar sempre ajustado ao centro da pagina */
+
+            /*
+            outline-width:  5px;
+            outline-style: dashed;
+            outline-color: salmon;
+            */
+                outline: 5px dashed salmon;
+        }
+        
+        a { /* box inline-level */
+            display: block; /* <~ teste com block */
+            /*
+            border-width: 10px;
+            border-style: solid; 
+            border-color: red;
+            */
+                border: 10px solid red;
+
+            /*
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px; 
+            */
+                padding: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.</p>
+</body>
+</html>
