@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+                            tbody > tr:nth-child(odd) { /* (odd = linha impar) | (2n-1 = a cada 2 duas linhas, iniciando da linha impar) */
+                                background-color: white;
+                            }
+
+                            tbody > tr:nth-child(even) { /* (even = linha par) | (2n = a cada 2 duas linhas, iniciando da linha par) */
+                                background-color: lightgrey;
+                            }
+
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION - (Legenda da Tabela)
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -------------------------------------
+        TABLE ROW = linha de Tabela
+        TABLE HEADER = Cabeçalho de Tabela
+        TABLE DATA = Dado de Tabela
+    -->
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">12 325 232</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">6 747 815</td>
+            </tr>
+            <tr>
+                <td>Brasília</td>
+                <td class="num">3 055 149</td>
+            </tr>
+            <tr>
+                <td>Salvador</td>
+                <td class="num">2 886 698</td>
+            </tr>
+
+            <tr>
+                <td>Fortaleza</td>
+                <td class="num">2 686 612</td>
+            </tr>
+
+            <tr>
+                <td>Belo Horizonte</td>
+                <td class="num">2 521 564</td>
+            </tr>
+
+            <tr>
+                <td>Manaus</td>
+                <td class="num">2 219 580</td>
+            </tr>
+
+            <tr>
+                <td>Curitiba</td>
+                <td class="num">1 948 626</td>
+            </tr>
+
+            <tr>
+                <td>Recife</td>
+                <td class="num">1 653 461</td>
+            </tr>
+
+            <tr>
+                <td>Goiânia</td>
+                <td class="num">1 536 097</td>
+            </tr>
+
+            <tr>
+                <td>Belém</td>
+                <td class="num">1 499 641</td>
+            </tr>
+
+            <tr>
+                <td>Porto Alegre</td>
+                <td class="num">1 488 252</td>
+            </tr>
+
+            <tr>
+                <td>Guarulhos</td>
+                <td class="num">1 392 121</td>
+            </tr>
+
+            <tr>
+                <td>Campinas</td>
+                <td class="num">1 213 792</td>
+            </tr>
+
+            <tr>
+                <td>São Luís</td>
+                <td class="num">1 108 975</td>
+            </tr>
+
+            <tr>
+                <td>São Gonçalo</td>
+                <td class="num">1 091 737</td>
+            </tr>
+
+            <tr>
+                <td>Maceió</td>
+                <td class="num">1 025 360</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <th class="num"><strong>62 325 232</strong></th>
+            </tr>
+        </tfoot>
+    </table>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fugit illum ex repellendus amet delectus doloribus porro sapiente provident, consequatur ipsa blanditiis quibusdam ullam atque eveniet facere saepe voluptas. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id numquam optio, vel quas explicabo molestiae asperiores rem eligendi atque assumenda ab itaque. Eum suscipit dicta fugiat quam dignissimos. Consequatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in similique magnam distinctio atque neque nihil recusandae ratione velit, doloremque pariatur ad aliquam temporibus quaerat. Vel pariatur dolor consectetur minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dicta, voluptatum iure eius at omnis doloribus sit nihil est. Error veniam numquam nulla nesciunt incidunt ut expedita exercitationem accusamus libero!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fugit illum ex repellendus amet delectus doloribus porro sapiente provident, consequatur ipsa blanditiis quibusdam ullam atque eveniet facere saepe voluptas. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id numquam optio, vel quas explicabo molestiae asperiores rem eligendi atque assumenda ab itaque. Eum suscipit dicta fugiat quam dignissimos. Consequatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in similique magnam distinctio atque neque nihil recusandae ratione velit, doloremque pariatur ad aliquam temporibus quaerat. Vel pariatur dolor consectetur minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dicta, voluptatum iure eius at omnis doloribus sit nihil est. Error veniam numquam nulla nesciunt incidunt ut expedita exercitationem accusamus libero!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fugit illum ex repellendus amet delectus doloribus porro sapiente provident, consequatur ipsa blanditiis quibusdam ullam atque eveniet facere saepe voluptas. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id numquam optio, vel quas explicabo molestiae asperiores rem eligendi atque assumenda ab itaque. Eum suscipit dicta fugiat quam dignissimos. Consequatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in similique magnam distinctio atque neque nihil recusandae ratione velit, doloremque pariatur ad aliquam temporibus quaerat. Vel pariatur dolor consectetur minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dicta, voluptatum iure eius at omnis doloribus sit nihil est. Error veniam numquam nulla nesciunt incidunt ut expedita exercitationem accusamus libero!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fugit illum ex repellendus amet delectus doloribus porro sapiente provident, consequatur ipsa blanditiis quibusdam ullam atque eveniet facere saepe voluptas. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id numquam optio, vel quas explicabo molestiae asperiores rem eligendi atque assumenda ab itaque. Eum suscipit dicta fugiat quam dignissimos. Consequatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in similique magnam distinctio atque neque nihil recusandae ratione velit, doloremque pariatur ad aliquam temporibus quaerat. Vel pariatur dolor consectetur minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dicta, voluptatum iure eius at omnis doloribus sit nihil est. Error veniam numquam nulla nesciunt incidunt ut expedita exercitationem accusamus libero!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fugit illum ex repellendus amet delectus doloribus porro sapiente provident, consequatur ipsa blanditiis quibusdam ullam atque eveniet facere saepe voluptas. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id numquam optio, vel quas explicabo molestiae asperiores rem eligendi atque assumenda ab itaque. Eum suscipit dicta fugiat quam dignissimos. Consequatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in similique magnam distinctio atque neque nihil recusandae ratione velit, doloremque pariatur ad aliquam temporibus quaerat. Vel pariatur dolor consectetur minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dicta, voluptatum iure eius at omnis doloribus sit nihil est. Error veniam numquam nulla nesciunt incidunt ut expedita exercitationem accusamus libero!
+    </p>
+</body>
+</html>
